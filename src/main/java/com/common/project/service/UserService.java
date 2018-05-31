@@ -1,8 +1,7 @@
 package com.common.project.service;
 
-import com.common.project.entity.User;
+import com.common.project.entity.DO.User;
 import com.common.project.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

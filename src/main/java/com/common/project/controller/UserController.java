@@ -1,6 +1,6 @@
 package com.common.project.controller;
 
-import com.common.project.entity.User;
+import com.common.project.entity.DO.User;
 import com.common.project.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;

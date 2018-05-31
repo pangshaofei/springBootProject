@@ -9,7 +9,7 @@
     </select>
     
 
-    <resultMap id="ResultMap" type="com.common.project.entity.User">
+    <resultMap id="ResultMap" type="com.common.project.entity.DO.User">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
         <result property="password" column="password"></result>

@@ -1,4 +1,4 @@
-package com.common.project.entity;
+package com.common.project.entity.DO;
 
 public class User {
     private Integer id;

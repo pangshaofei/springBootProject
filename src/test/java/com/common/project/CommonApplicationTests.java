@@ -1,19 +1,15 @@
 package com.common.project;
 
-import com.common.project.entity.User;
 import com.common.project.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.ResourceUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
