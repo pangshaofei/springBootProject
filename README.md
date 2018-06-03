@@ -1,2 +1,2 @@
-# springBoot-
-springBoot+mybatis+redis+druids
+# springBoot-Project
+springBoot+mybatis+redis+druids+rabbitmq
