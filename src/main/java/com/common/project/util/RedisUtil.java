@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Component
+@SuppressWarnings("unchecked")
 public class RedisUtil {
     @Autowired
     private RedisTemplate redisTemplate;
@@ -25,10 +26,13 @@ public class RedisUtil {
     /**
      * @Description: 批量删除缓存(通配符)
      */
+    @SuppressWarnings("unchecked")
     public void removePattern(final String pattern) {
         Set<Serializable> keys = redisTemplate.keys(pattern);
-        if (keys.size() > 0)
+        if (keys.size() > 0){
             redisTemplate.delete(keys);
+        }
+
     }
 
     /**

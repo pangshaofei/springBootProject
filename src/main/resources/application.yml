@@ -10,6 +10,11 @@ logging:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.common.project.mapper
+pagehelper:
+  supportMethodsArguments: true
+  reasonable: true
+  helperDialect: mysql
+  params: count=countSql
 #上传文件到指定目录
 uploadDir: D:\mystudy\pic\
 #上传文件到静态目录
@@ -17,6 +22,9 @@ uploadStatic: 127.0.0.1:8080/images/
 spring:
   resources:
       static-locations: classpath:static/,file:static/
+  output:
+      ansi:
+        enabled: DETECT
   servlet:
       multipart:
         # 上传一个文件最大值,默认1Mb
@@ -65,3 +73,4 @@ spring:
         publisher-returns: true # 开启确认消息是否到达队列，需要设置 true
   jackson:
         date-format: yyyy-MM-dd HH:mm:ss
+
