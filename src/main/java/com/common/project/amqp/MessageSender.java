@@ -1,3 +1,4 @@
+/*
 package com.common.project.amqp;
 
 import org.slf4j.Logger;
@@ -23,18 +24,22 @@ public class MessageSender implements RabbitTemplate.ConfirmCallback, RabbitTemp
         this.rabbitTemplate.setConfirmCallback(this);
         this.rabbitTemplate.setReturnCallback(this);
     }
-    /**
+    */
+/**
      * 测试无返回消息的
-     */
+     *//*
+
     public void send() {
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         rabbitTemplate.convertAndSend(RabbitMQConstant.EXCHANGES_NAME, RabbitMQConstant.ROUTING_KEY, ">>>>>> Hello World".getBytes(), correlationData);
         log.info(">>>>>>>>>> Already sent message");
     }
 
-    /**
+    */
+/**
      * 测试有返回消息的，需要注意一些问题
-     */
+     *//*
+
     public void sendAndReceive() {
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         Object o = rabbitTemplate.convertSendAndReceive(RabbitMQConstant.EXCHANGES_NAME, RabbitMQConstant.ROUTING_REPLY_KEY, ">>>>>>>> Hello World Second".getBytes(), correlationData);
@@ -56,3 +61,4 @@ public class MessageSender implements RabbitTemplate.ConfirmCallback, RabbitTemp
         log.info("消息id：{} 发送失败", message.getMessageProperties().getCorrelationId());
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.common.project.amqp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,18 +12,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageReceiver{
     protected static final Logger log = LoggerFactory.getLogger(MessageReceiver.class);
-    /**
+    */
+/**
      * 无返回消息的
      *
      * @param message
-     */
+     *//*
+
     @RabbitListener(bindings = @QueueBinding(value = @Queue(value = RabbitMQConstant.QUEUE_NAME, durable = "true", exclusive = "false", autoDelete = "false"),
             exchange = @Exchange(value = RabbitMQConstant.EXCHANGES_NAME, ignoreDeclarationExceptions = "true", type = ExchangeTypes.TOPIC, autoDelete = "false"),
             key = RabbitMQConstant.ROUTING_KEY))
     public void receive(byte[] message) {
         log.info(">>>>>>>>>>> receive：" + new String(message));
     }
-    /**
+    */
+/**
      * 设置有返回消息的
      * 需要注意的是，
      * 1. 在消息的在生产者（发送消息端）一定要使用 SendAndReceive(……) 这种带有 receive 的方法，否则会抛异常，不捕获会死循环。
@@ -30,7 +34,8 @@ public class MessageReceiver{
      *
      * @param message
      * @return
-     */
+     *//*
+
     @RabbitListener(bindings = @QueueBinding(value = @Queue(value = RabbitMQConstant.QUEUE_NAME, durable = "true", exclusive = "false", autoDelete = "false"),
             exchange = @Exchange(value = RabbitMQConstant.EXCHANGES_NAME, ignoreDeclarationExceptions = "true", type = ExchangeTypes.TOPIC, autoDelete = "false"),
             key = RabbitMQConstant.ROUTING_REPLY_KEY))
@@ -39,3 +44,4 @@ public class MessageReceiver{
         return ">>>>>>>> I got the message";
     }
 }
+*/

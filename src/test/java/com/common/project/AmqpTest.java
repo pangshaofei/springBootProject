@@ -1,3 +1,4 @@
+/*
 package com.common.project;
 
 import com.common.project.amqp.MessageSender;
@@ -22,3 +23,4 @@ public class AmqpTest {
         sender.sendAndReceive();
     }
 }
+*/
