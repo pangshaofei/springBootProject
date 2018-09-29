@@ -1,6 +1,7 @@
 package com.common.project;
 
 import com.common.project.mapper.UserMapper;
+import com.common.project.service.Crawler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,18 @@ public class CommonApplicationTests {
 private UserMapper userMapper;
 
 
+
+
 	@Test
-	public void contextLoads() {
+	public    void contextLoads() {
+		Crawler crawler = new Crawler();
+		String context= crawler.SendGet("https://www.baidu.com");
+		System.out.println(context);
+	}
 		/*List<User> userList=userMapper.selectAll();
 		userList.forEach(item->System.out.println(item.getName()));
 		System.out.println(userList);*/
-		File path = null;
+	/*	File path = null;
 		try {
 			path = new File(ResourceUtils.getURL("classpath:").getPath());
 		} catch (FileNotFoundException e) {
@@ -34,7 +41,7 @@ private UserMapper userMapper;
 		File upload = new File(path.getAbsolutePath(),"static/img/a.jpg");
 		System.out.println(upload.length());
 
-	}
+	}*/
 
 
 
