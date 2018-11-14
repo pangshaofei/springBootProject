@@ -168,7 +168,7 @@ public   class  CryptoUtil {
         String requestValue="";
         try{
 
-            requestValue = URLEncoder.encode(src);
+            requestValue = URLEncoder.encode(src,"UTF-8");
         }
         catch(Exception e){
             e.printStackTrace();
@@ -232,7 +232,7 @@ public   class  CryptoUtil {
         String requestValue="";
         try{
 
-            requestValue = URLDecoder.decode(src);
+            requestValue = URLDecoder.decode(src,"UTF-8");
         }
         catch(Exception e){
             e.printStackTrace();
